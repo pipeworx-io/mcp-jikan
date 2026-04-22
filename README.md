@@ -1,31 +1,54 @@
 # mcp-jikan
 
-MCP server for anime and manga data via the [Jikan API](https://jikan.moe/) (MyAnimeList). No authentication required.
+Jikan MCP — wraps the Jikan v4 API (anime/manga data, free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_anime` | Search anime by title |
-| `get_anime` | Get full details for a specific anime by MAL ID |
-| `top_anime` | Get top-ranked anime, optionally filtered by type |
-| `search_characters` | Search anime/manga characters by name |
 
-## Quickstart (Pipeworx Gateway)
+## Quick Start
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "method": "tools/call",
-    "params": {
-      "name": "jikan_search_anime",
-      "arguments": { "query": "Fullmetal Alchemist" }
-    },
-    "id": 1
-  }'
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
+
+```json
+{
+  "mcpServers": {
+    "jikan": {
+      "url": "https://gateway.pipeworx.io/jikan/mcp"
+    }
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Jikan data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
