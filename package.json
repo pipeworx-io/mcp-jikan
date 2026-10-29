@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-jikan",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Jikan MCP — wraps the Jikan v4 API (anime/manga data, free, no auth)",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-jikan": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "jikan"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-jikan.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/jikan",
   "pipeworx": {
-    "sourceHash": "v1-0827f08270bf70e646b81db791aee2422e8138142f359da41a0f2a8568f1c31b",
-    "sourceCommit": "33741fe6d9ba71856e73fa683c73572d1ddf2e93"
+    "mode": "gateway",
+    "slug": "jikan",
+    "gatewaySlug": "jikan",
+    "sourceHash": "v1-82ae4e98a6f3a7072004334f52b9150dff84861bda5560cf6636232c5a8df325",
+    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
   }
 }
