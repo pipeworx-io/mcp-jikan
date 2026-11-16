@@ -1,6 +1,6 @@
 [
   {
-    "name": "search_anime",
+    "name": "jikan_search_anime",
     "description": "Search for anime by title. Returns title, score, type, episode count, status, synopsis, and genres.",
     "inputSchema": {
       "type": "object",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "name": "get_anime",
+    "name": "jikan_get_anime",
     "description": "Get full details for an anime by ID. Returns score, synopsis, genres, studios, episode count, and more.",
     "inputSchema": {
       "type": "object",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "name": "top_anime",
+    "name": "jikan_top_anime",
     "description": "Get top-ranked anime, optionally filtered by type (e.g., \"tv\", \"movie\", \"ova\", \"ona\"). Returns titles, scores, and rankings.",
     "inputSchema": {
       "type": "object",
@@ -46,7 +46,7 @@
     }
   },
   {
-    "name": "search_characters",
+    "name": "jikan_search_characters",
     "description": "Search for anime/manga characters by name. Returns character names, nicknames, favorites count, and biography.",
     "inputSchema": {
       "type": "object",

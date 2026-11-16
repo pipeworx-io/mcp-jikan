@@ -1,17 +1,17 @@
 # mcp-jikan
 
-Jikan MCP — wraps the Jikan v4 API (anime/manga data, free, no auth)
+Unofficial Jikan MCP — wraps the Jikan v4 API (anime/manga data, free, no auth)
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1865+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 2006+ live data sources. This is an independent, unofficial integration — not affiliated with, endorsed by, or published by the upstream provider.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_anime` | Search for anime by title. Returns title, score, type, episode count, status, synopsis, and genres. |
-| `get_anime` | Get full details for an anime by ID. Returns score, synopsis, genres, studios, episode count, and more. |
-| `top_anime` | Get top-ranked anime, optionally filtered by type (e.g., "tv", "movie", "ova", "ona"). Returns titles, scores, and rankings. |
-| `search_characters` | Search for anime/manga characters by name. Returns character names, nicknames, favorites count, and biography. |
+| `jikan_search_anime` | Search for anime by title. Returns title, score, type, episode count, status, synopsis, and genres. |
+| `jikan_get_anime` | Get full details for an anime by ID. Returns score, synopsis, genres, studios, episode count, and more. |
+| `jikan_top_anime` | Get top-ranked anime, optionally filtered by type (e.g., "tv", "movie", "ova", "ona"). Returns titles, scores, and rankings. |
+| `jikan_search_characters` | Search for anime/manga characters by name. Returns character names, nicknames, favorites count, and biography. |
 
 ## Quick Start
 
@@ -57,7 +57,7 @@ directly, instead of just this one's:
 }
 ```
 
-Both URLs reach the same gateway and the same 1865+ data sources. The
+Both URLs reach the same gateway and the same 2006+ data sources. The
 only difference is which pack's tools are listed **directly**; `ask_pipeworx`
 reaches all of them from either one.
 

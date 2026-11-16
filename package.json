@@ -1,7 +1,7 @@
 {
   "name": "@pipeworx/mcp-jikan",
-  "version": "1.1.1",
-  "description": "Jikan MCP — wraps the Jikan v4 API (anime/manga data, free, no auth)",
+  "version": "1.1.2",
+  "description": "Unofficial Jikan MCP — wraps the Jikan v4 API (anime/manga data, free, no auth)",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "jikan",
     "gatewaySlug": "jikan",
-    "sourceHash": "v1-9b8b130cc8653117656643c3bc6855ab4fe1d5ab9f90cd2f348968f12336c7cc",
-    "sourceCommit": "236b0a46d91f343fe094da9f499c378e88f78312"
+    "sourceHash": "v1-50d0c3baf26111a4fa816a42a29f344aba69a29621ed274c989cca77fd1b08c2",
+    "sourceCommit": "874331b0c46b151f9264bd14840631427a7721c1"
   }
 }
